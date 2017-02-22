@@ -83,7 +83,7 @@ def simple_mnist():
                                    mb_size_schedule = minibatch_size_schedule(minibatch_size),
                                    input_vars_to_streams = input_map,
                                    max_samples = num_samples_per_sweep * num_sweeps_to_train_with) \
-        .progress_printing(printer=progress_printer, frequency=num_samples_per_sweep) \
+        .progress_printing(printer=progress_printer, frequency=num_samples_per_sweep)
     training_session(trainer=trainer, config=config).train()
     
     # Load test data
